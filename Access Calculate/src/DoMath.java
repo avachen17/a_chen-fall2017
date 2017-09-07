@@ -12,6 +12,11 @@ public class DoMath {
 		System.out.println(Calculate.cube(2));
 		System.out.println(Calculate.average(2,2));
 		System.out.println(Calculate.average(2, 2, 2));
+		System.out.println(Calculate.toDegrees(10));
+		System.out.println(Calculate.toRadians(10));
+		System.out.println(Calculate.discriminant(2,1,3));
+		System.out.println(Calculate.toImproperFrac(1,2,3));
+		System.out.println(Calculate.foil(1,2,3,4, "n"));
 	}
 
 }
