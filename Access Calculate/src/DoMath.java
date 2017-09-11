@@ -17,6 +17,16 @@ public class DoMath {
 		System.out.println(Calculate.discriminant(2,1,3));
 		System.out.println(Calculate.toImproperFrac(1,2,3));
 		System.out.println(Calculate.foil(1,2,3,4, "n"));
+		System.out.println(Calculate.isDivisibleBy(4,2));
+		System.out.println(Calculate.absValue(-5));
+		System.out.println(Calculate.max(1,2));
+		System.out.println(Calculate.max(4,6,7));
+		System.out.println(Calculate.min(4,7));
+		System.out.println(Calculate.round2(2.354643));
+		
+		
+		
+		
 	}
 
 }

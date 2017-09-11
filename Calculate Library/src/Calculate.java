@@ -49,14 +49,60 @@ public class Calculate {
 		return (num1*num3) + variable + "^2 +" + ((num1*num4) + (num2*num3)) +variable+ "+"+ (num2*num4); 
 	}
 	//this method determines whether or not one integer is evenly divisible by the other 
-	public static int isDivisibleBy (int number1, int number2) {
+	public static boolean isDivisibleBy (int number1, int number2) {
 		if (number1%number2 == 0) {
 			return true;
-			else {
+		}else{
 				return false; 
-			}
 		}
 	}
-	
+	//this method determines the absolute value
+	public static double absValue (double number1) {
+			  return number1 < 0 ? -number1 : number1;
 	}
+	//this method returns the larger of the values passed 
+	public static double max (double number1, double number2) {
+		if (number1 > number2) {
+			return number1; 
+		}
+		if (number2 > number1) {
+			return number2;
+		}
+		return number1;
+	}
+	//this method is an overload of the max method 
+	public static double max (double number1, double number2, double number3) {
+		if (number1 > number2) {
+			return number1; 
+		}else if (number2>number3) {
+			return number2;
+		} else {
+			return number3; 
+		}
+	}
+	//this method returns the smallest value
+		public static int min (int number1, int number2) {
+			if (number1 < number2) {
+				return number1; 
+			}
+			if (number2 < number1) {
+				return number2;
+			}
+			return number1;
+	}
+	//this method rounds a double correctly to 2 decimal places and returns a double 
+		public static double round2 (double number1) {
+			if ((number1*1000) % 10 < 5) {
+				return ((number1*1000)-((number1*1000)%10))/1000;
+			} else {
+				return ((10-((number1*1000)%10))+(number1*1000))/1000;
+			}
+		}
+}
+
+		
+	
+	
+	
+	
 
