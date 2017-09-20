@@ -98,9 +98,34 @@ public class Calculate {
 				return ((10-((number1*1000)%10))+(number1*1000))/1000;
 			}
 		}
+	//this method raises a value to a positive integer power
+		public static double exponent(double base , int power) {
+			double result = 1;
+				for (int i= 0; i< power; i++){
+					result = base*result;
+		}
+			return result;
+		}
+	//this method multiplies the integer by its factorial
+		public static int factorial(int operand){
+			if (operand<=2) {
+				return operand;
+			}
+			int result = operand * (operand-1);
+			int operand2 = operand;
+			operand2 = operand;
+			while (operand2>0) {
+				result = result * operand2; 
+				operand2--;
+			}
+			return result; 
 }
-
-		
+		//this method finds the greatest common factor of two integers 
+		public static double gcf(double factor1,double factor2) {
+			return max(factor1, factor2);
+		}
+}
+	
 	
 	
 	
