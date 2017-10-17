@@ -4,6 +4,7 @@
  * It contains a series of methods to do basic math fractions
  */
 public class Calculate {
+	//part 1: methods, headers, and basic math 
 	// this method finds the square of the input
 	public static int square (int operand) {
 		int squared = operand*operand;
@@ -32,22 +33,23 @@ public class Calculate {
 	public static double toRadians (double angleDegrees) {
 		return angleDegrees*(3.14159/180); 
 	}
-	//this method finds the discriminant
+	//this method finds the discriminant by using the quadratic equation in standard form
 	public static double discriminant (double number1, double number2, double number3) {
 		return ((number2*number2)- (4*number1*number3)); 
 	}
-	//this method finds improper fractions 
+	//this method converts mixed numbers into an improper fraction 
 	public static String toImproperFrac (int sideNumber, int topNumber, int bottomNumber) {
 		return ((sideNumber * bottomNumber) + "/" + (bottomNumber));
 	}
-	//this method finds Mixed Numbers
+	//this method converts an improper fraction into a mixed number
 	public static String toMixedNum (int top, int bottom) {
 		return (top/bottom) + "_" + (top % bottom) + "/" + (bottom);
 		}
-	//this method does Foil method 
+	//this method converts a binomial multiplication of the form (ax + b)(cx +d) into a quadratic equation of the form (ax^2+bx+c)
 	public static String foil (int num1, int num2, int num3, int num4, String variable) {
 		return (num1*num3) + variable + "^2 +" + ((num1*num4) + (num2*num3)) +variable+ "+"+ (num2*num4); 
 	}
+	//part 2: methods with conditionals 
 	//this method determines whether or not one integer is evenly divisible by the other 
 	public static boolean isDivisibleBy (int number1, int number2) {
 		if (number1%number2 == 0) {
@@ -57,11 +59,15 @@ public class Calculate {
 		}
 	}
 	//this method determines the absolute value
-	public static double absValue (double number1) {
-			  return number1 < 0 ? -number1 : number1;
+	public static double absValue (double value) {
+			  if (value < 0) {
+				  return value*-1;
+			  }else {
+				  return value;
+			  }
 	}
 	//this method returns the larger of the values passed 
-	public static double max (double number1, double number2) {
+	public static int max (int number1, int number2) {
 		if (number1 > number2) {
 			return number1; 
 		}
@@ -98,6 +104,7 @@ public class Calculate {
 				return ((10-((number1*1000)%10))+(number1*1000))/1000;
 			}
 		}
+	//part 3: methods that use loops and calls to other methods 
 	//this method raises a value to a positive integer power
 		public static double exponent(double base , int power) {
 			double result = 1;
@@ -120,14 +127,55 @@ public class Calculate {
 			}
 			return result; 
 }
-		//this method finds the greatest common factor of two integers 
-		public static double gcf(double factor1,double factor2) {
-			return max(factor1, factor2);
+	//this method determines whether or not an integer is prime
+		public static boolean isPrime(int value) {
+			boolean prime = true; 
+			value = (int) absValue(value); 
+			if(value%2 == 0) {
+				prime = false;		
+			}
+			return prime; 
+		}
+	//this method finds the greatest common factor of two integers 
+		public static int gcf(int num1, int num2){
+			int gcf = 1; 
+			for(int i =1; i<= num2; i++) {
+				if(isDivisibleBy(num1, i) && isDivisibleBy(num2, i)) {
+					gcf = i; 
+				}
+			}
+			return gcf;
+		}
+	//this method returns an approximation of the square root of the value passed, rounded to two decimal places 
+		public static double sqrt(double square){
+			if (square<0) {
+				throw new IllegalArgumentException("Cannot root negatives"); 
+			}
+			double number; 
+			double squareRoot = square/2; 
+			do {
+				number = squareRoot;
+				squareRoot = (number + (square/number)) / 2; 
+			} while((number - squareRoot)!= 0);
+			return Calculate.round2(squareRoot);
+			}
+		{
+		}
+	//part 4: Throwing Exceptions
+	//this method uses the coefficients of a quadratic equation in standard form and uses the quadratic formula to approximate the real roots, if any
+	public static String quadForm(int a, int b, int c) {
+	double discrim = discriminant(a, b, c);
+	if (discrim < 0) {
+		return "no real roots"; 
+	} else if (discrim == 0) {
+		double outcome = (-b + sqrt(discrim)) / (2 * a);
+		return round2(outcome) + " ";
+	}else { 
+		double positiveQuadratic = (-b + sqrt(discrim)) / (2 * a);
+		double negativeQuadratic = (-b - sqrt(discrim)) / (2 * a);
+		return round2(negativeQuadratic) + " and " + round2(positiveQuadratic); 
+	}
 		}
 }
-	
-	
-	
-	
-	
+
 
