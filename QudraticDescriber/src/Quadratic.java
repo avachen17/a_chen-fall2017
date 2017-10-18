@@ -4,11 +4,11 @@
 //This is part 5 of Calculate Project. This code will calculate the intercepts using the quadratic formula 
 public class Quadratic {
 	public static String quadForm(double a, double b, double c){
-		if (discriminant(a,b,c) < 0){
-			throw new IllegalArgumentException("no real roots");
-
+		double discrim = discriminant(a,b,c); 
+		if (discrim < 0){
+			throw new IllegalArgumentException(" there are no real roots");
 		}
-		if (discriminant(a,b,c) == 0){
+		if (discrim == 0){
 			 String roots = round2(-b /(2*a)) + " ";
 			 return roots;
 		}
@@ -19,8 +19,7 @@ public class Quadratic {
 			if (root1 > root2 || root1 < root2){
 				String roots = root2 + " and " + root1;
 				return roots;
-			}
-			
+			}		
 			}
 		return null;		
 	}
