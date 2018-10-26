@@ -48,7 +48,7 @@ public class Quadratic {
 			}
 
 
-		public static void  quadrDescriber(double a, double b, double c) {
+		public static void quadrDescriber(double a, double b, double c) {
 			String direction;
 			String vertex;
 			if(a>0) { 
