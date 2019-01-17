@@ -1,5 +1,4 @@
 //Ava Chen
-//AP Compsci per2
 //Due November 6, 2017
 package arrays_materials;
 
