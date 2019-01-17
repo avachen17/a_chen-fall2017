@@ -1,6 +1,6 @@
 //Ava Chen
 //December 18, 2017
-//FracCalc final + extra credit + objects
+
 package fracCalc;
 
 import java.util.Scanner;
