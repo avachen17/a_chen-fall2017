@@ -1,8 +1,5 @@
 /*Ava Chen
  * September 6, 2017 
- * Our self written math library
- * It contains a series of methods to do basic math fractions
- * This is the runner for the calculate library. It is used to test the methods and calculat
 */
 public class DoMath {
 	public static void main1(String[] args) {
