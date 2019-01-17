@@ -1,7 +1,5 @@
 //Ava Chen
-//APCS Per2
 //November 1, 2017 
-//Array Mini-Lab
 import java.util.Arrays;
 public class LotsofCopies {
 
