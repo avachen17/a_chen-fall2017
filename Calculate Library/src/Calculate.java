@@ -1,8 +1,6 @@
 /*Ava Chen
  * September 6, 2017 
- * Our self written math library
- * It contains a series of methods to do basic math fractions
- */
+/
 public class Calculate {
 	//part 1: methods, headers, and basic math 
 	// this method finds the square of the input
