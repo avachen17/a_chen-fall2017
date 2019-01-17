@@ -1,7 +1,6 @@
 //Ava Chen
-//AP Compsci per2
 //December 18, 2017
-//FracCalc final + extra credit + objects
+
 package fracCalc;
 
 public class Fraction {
