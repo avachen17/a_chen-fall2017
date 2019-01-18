@@ -1,11 +1,10 @@
 //Ava Chen
 //May 1, 2018
 //TextExcel
-//AP compsci per 2
+//AP compsci pr 2
 package textExcel;
 
 import java.io.FileNotFoundException;
-// Update this file with your own code.
 import java.util.Scanner; 
 
 public class TextExcel
