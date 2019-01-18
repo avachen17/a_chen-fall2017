@@ -1,7 +1,6 @@
 //Ava Chen
 //May 1, 2018
 //TextExcel
-//AP compsci per 2
 package textExcel;
 
 //*******************************************************
