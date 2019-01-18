@@ -1,7 +1,6 @@
 //Ava Chen 
 //May 1, 2018
 //Text Excel
-//Computer Science per 2
 package textExcel;
 
 //*******************************************************
