@@ -1,7 +1,6 @@
 //Ava Chen
 //May 1, 2018
 //TextExcel
-//AP compsci pr 2
 package textExcel;
 
 import java.io.FileNotFoundException;
