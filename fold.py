@@ -1,0 +1,32 @@
+def sum (list1):
+   i = 0
+   sum = 0
+   for i in range (len(list1)):
+      sum += list1[i]
+   return sum
+
+def index_of_smallest (list1):
+   i = 0
+   j = 0
+   count = 1
+   if (len(list1)) <= 0:
+      return -1
+   for i in range (len(list1)):
+      for j in range (i+1, (len(list1))):
+         if list1[i] < list1[j]:
+            lowest = list1[i]
+            if list1[i] == list1[j]:
+               count += 1
+         else:
+            lowest = 0
+
+   if count > 0:
+      return count
+   return lowest
+
+def nearest_origin(list1):
+   count = 0
+   if (len(list1)) <= 0:
+      return -1
+   
+

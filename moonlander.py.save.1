@@ -1,0 +1,32 @@
+from landerFuncs import *
+import math
+
+def main(): 
+   showWelcome()
+   altitude = getAltitude()
+   fuel = getFuel()
+   time = 0
+   velocity = 0
+   fuelRate = 0
+   displayLMState(time, altitude, velocity, fuel, fuelRate)
+   while altitude > 0: 
+      time += 1
+      gravity = 1.62
+      fuelRate = getFuelRate(fuel)
+      fuel = updateFuel(fuel, fuelRate)
+      acceleration = updateAcceleration(gravity, fuelRate)
+      altitude = updateAltitude(altitude, velocity, acceleration)
+      velocity = updateVelocity(velocity, acceleration)
+      if(fuel > 0):   
+         displayLMState(time, altitude, velocity, fuel, fuelRate)
+      else:       
+         print("OUT OF FUEL - Elapsed Time: ", time, "Altitude ", round(altitude, 2), "Velocity: ", round(velocity,2))
+   
+   print()   
+   print("LM state at landing/impact")
+   displayLMState(time, altitude, velocity, fuel, fuelRate)
+   print()
+   displayLMLandingStatus (velocity)
+   
+if __name__ == "__main__":
+   main()
